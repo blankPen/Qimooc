@@ -3,7 +3,7 @@
 * @Date:   2016-08-17 13:09:19
 * @Desc: this_is_desc
 * @Last Modified by:   pengzhen
-* @Last Modified time: 2016-08-17 15:01:14
+* @Last Modified time: 2016-08-18 14:05:17
 */
 
 'use strict';
@@ -19,7 +19,7 @@ import {
     Actions,
     ActionConst,
 } from 'react-native-router-flux';
-import Button from "react-native-button";
+import Button from "../ui/Button";
 
 function mapStateToProps(state) {
   return {

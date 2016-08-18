@@ -3,7 +3,7 @@
 * @Date:   2016-08-17 12:43:48
 * @Desc: this_is_desc
 * @Last Modified by:   pengzhen
-* @Last Modified time: 2016-08-17 15:01:30
+* @Last Modified time: 2016-08-18 15:06:07
 */
 
 'use strict';
@@ -16,9 +16,9 @@ import {
     ActionConst,
 } from 'react-native-router-flux';
 
-import Launch from './containers/Launch';
-import Login from './containers/Login';
-import Main from './containers/Main';
+import Launch from '../containers/Launch';
+import Login from '../containers/Login';
+import Main from '../containers/Main';
 
 import {
   StyleSheet,

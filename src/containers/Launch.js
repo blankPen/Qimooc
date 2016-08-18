@@ -3,7 +3,7 @@
  * @Date:   2016-08-17 12:01:36
  * @Desc: this_is_desc
  * @Last Modified by:   pengzhen
- * @Last Modified time: 2016-08-17 15:04:44
+ * @Last Modified time: 2016-08-18 15:10:07
  */
 
 'use strict';
@@ -23,7 +23,7 @@ import {
     Actions,
     ActionConst,
 } from 'react-native-router-flux';
-import Button from "react-native-button";
+import Button from "../ui/Button";
 
 function mapStateToProps(state) {
     return {
@@ -40,12 +40,10 @@ class Launch extends Component {
     }
 
     componentDidMount() {
-        console.log(ActionConst)
         this.timer = setInterval(()=>{
             let time = this.state.time - 1;
-            console.log(time)
             if(time == 0){
-                Actions.Login({ type: ActionConst.PUSH_OR_POP });
+                Actions.Login({ unmountScenes: true });
                 clearInterval(this.timer);
             }else{
                 this.setState({
@@ -55,14 +53,15 @@ class Launch extends Component {
         },1000);
     }
     componentWillUnmount() {
-         
+        console.log('卸载Launch场景。')
+        clearInterval(this.timer);
     }
     render() {
         return (
             <View style={styles.container}>
                 <Text style={{fontSize: 20}}>Welcome to Qimooc</Text>
                 <Text style={{fontSize: 20}}>{this.state.time}秒后跳转页面</Text>
-                <Button onPress={()=>Actions.Login({ type: ActionConst.POP_TO })}>skip</Button>
+                <Button onPress={Actions.Login}>skip</Button>
             </View>
         );
     }

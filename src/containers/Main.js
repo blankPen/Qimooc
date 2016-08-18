@@ -3,7 +3,7 @@
  * @Date:   2016-08-17 13:35:26
  * @Desc: this_is_desc
  * @Last Modified by:   pengzhen
- * @Last Modified time: 2016-08-17 15:00:11
+ * @Last Modified time: 2016-08-18 14:16:41
  */
 
 'use strict';
@@ -21,7 +21,7 @@ import {
     View,
     Text
 } from 'react-native';
-import Button from "react-native-button";
+import Button from "../ui/Button";
 
 const Main = color => class extends Component {
     render() {

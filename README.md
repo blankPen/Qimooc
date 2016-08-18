@@ -27,6 +27,26 @@
 
 #### 遇到的坑
 
+###### 关于路由切换
+```
+
+    import { Actions,ActionConst } from 'react-native-router-flux';
+
+    Actions.pop(num) // 回退，回退num个场景, 默认为1
+
+    Actions.Login({ type: ActionConst.REPLACE });
+    // Actions.ROUTE_NAME(params);
+    /* 
+        跳转到登录页
+        Login为路由配置的key
+        参数params可为空,Actions会将params传到跳转的route中,在切换后的场景中this.props可取到
+        固定参数:
+            type 切换类型 在ActionConst中取
+            unmountScenes 默认为false 为true时切换场景后会卸载当前场景 如 Launch欢迎页
+
+    */
+```
+
 
 
 > 上次更新时间 2016-8-17
