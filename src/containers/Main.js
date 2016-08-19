@@ -3,10 +3,9 @@
  * @Date:   2016-08-17 13:35:26
  * @Desc: this_is_desc
  * @Last Modified by:   pengzhen
- * @Last Modified time: 2016-08-18 14:16:41
+ * @Last Modified time: 2016-08-19 10:38:07
  */
 
-'use strict';
 'use strict';
 
 import React, {

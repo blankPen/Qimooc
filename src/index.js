@@ -1,39 +1,15 @@
-/*
- * @Author: pengzhen
- * @Date:   2016-08-17 12:00:32
- * @Desc: this_is_desc
- * @Last Modified by:   pengzhen
- * @Last Modified time: 2016-08-17 12:48:55
- */
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
+import router from './routers/';
+import configureStore from './configureStore';
 
-'use strict';
-import React, {
-    Component
-} from 'react';
-import {
-    StyleSheet,
-    View,
-} from 'react-native';
-import {
-    createStore,
-    combineReducers
-} from 'redux';
-import {
-    Provider,
-    connect
-} from 'react-redux';
-import * as reducers from './reducers';
-import router from './router';
+const store = configureStore();
 
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+const Qimooc = () => (
+  <Provider store={store}>
+    {router}
+  </Provider>
+);
 
-export default class AppContainer extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                {router}
-            </Provider>
-        );
-    }
-}
+AppRegistry.registerComponent('Qimooc', () => Qimooc);

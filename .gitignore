@@ -33,9 +33,16 @@ local.properties
 #
 node_modules/
 npm-debug.log
+.nyc_output
+
+*.bundle
 
 # BUCK
 buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+
+# Deco
+#
+.deco/

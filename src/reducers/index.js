@@ -3,13 +3,16 @@
  * @Date:   2016-08-17 12:02:19
  * @Desc: this_is_desc
  * @Last Modified by:   pengzhen
- * @Last Modified time: 2016-08-17 13:02:37
+ * @Last Modified time: 2016-08-19 09:54:23
  */
 
 'use strict';
+import {
+    combineReducers
+} from 'redux';
 
 import global from './global';
 
-export {
+export default combineReducers({
     global
-};
+});
