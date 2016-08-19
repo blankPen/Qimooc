@@ -25,7 +25,24 @@
     - **ui/** UI组件,不涉及任何业务逻辑，当做三方库开发，各自独立，如：Button之类
     - **utils** 工具类，存放常用工具，工程集成lodash.js
 
-#### 遇到的坑
+--------
+
+#### Usage
+
+###### 关于启动
+```
+    //Mac中配置
+    $ xcode-select --switch /Applications/[Xcode应用名].app/Contents/Developer
+    // ios运行
+    $ npm run ios-open //在xcode中打开工程
+    $ npm run ios // 启动ios模拟器并运行
+    // android运行
+    $ npm run android // 启动android模拟器并运行，并没有玩过
+```
+
+###### 关于Debug
+chrome安装redux-devtool,访问路径[localhost:8081/debugger-ui](localhost:8081/debugger-ui)
+
 
 ###### 关于路由切换
 ```
@@ -46,6 +63,8 @@
 
     */
 ```
+
+--------
 
 
 > 上次更新时间 2016-8-19
