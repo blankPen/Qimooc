@@ -3,7 +3,7 @@
 * @Date:   2016-08-17 12:43:48
 * @Desc: this_is_desc
 * @Last Modified by:   pengzhen
-* @Last Modified time: 2016-08-18 15:06:07
+* @Last Modified time: 2016-08-19 15:16:09
 */
 
 'use strict';
@@ -16,9 +16,8 @@ import {
     ActionConst,
 } from 'react-native-router-flux';
 
-import Launch from '../containers/Launch';
-import Login from '../containers/Login';
-import Main from '../containers/Main';
+import Launch from '../components/Launch';
+import TodoList from '../components/TodoList';
 
 import {
   StyleSheet,
@@ -38,45 +37,20 @@ class TabIcon extends React.Component {
 }
 
 const router = (
-    <Router sceneStyle={{ backgroundColor: 'white' }}>
+    <Router sceneStyle={{ backgroundColor: 'white',paddingTop: 20 }}>
         <Scene key="root" hideNavBar>
-              
             <Scene key="Launch"
                 component={Launch}
                 title='Launch'
                 type={ActionConst.REPLACE} 
-                initial={true} />
+            />
 
-            <Scene key="Login"
-                title='Login'
-                component={Login}
-                type={ActionConst.REPLACE} />
-
-            
-            <Scene key="Main"
-                tabs={true}
-                hideNavBar={true}
-                tabBarStyle={{height: 50}}>
-                <Scene key="Logout"
-                    title="Logout"
-                    hideNavBar={true}
-                    icon={TabIcon}
-                    component={Main('red')}/>
-                
-                <Scene key="Home"
-                    title="Home"
-                    hideNavBar={true}
-                    icon={TabIcon}
-                    component={Main('blue')}
-                    initial={true}/>
-
-                <Scene key="Profile"
-                    title="Profile"
-                    hideNavBar={true}
-                    icon={TabIcon}
-                    component={Main('yellow')}/>
-            </Scene>
-           
+            <Scene key="TodoList"
+                title='TodoList'
+                component={TodoList}
+                type={ActionConst.REPLACE} 
+                initial={true} 
+            />
         </Scene>
     </Router>
 );
